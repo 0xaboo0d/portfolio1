@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulrahman's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    header {
+      padding: 6rem 2rem 2rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    section {
+
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      animation: titleFade 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0.5rem 0.5rem 0 0;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn i {
+      transition: transform 0.4s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn:hover i {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes titleFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      color: #4f94d4;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #00ff8c;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+  <nav>
+    <div><a href="#">Abdelrahman</a></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Abdelrahman</h1>
+    <p> jr Penetration Tester | CTF Player | Bug Hunter </p>
+  </header>
+
+  <section id="about" class="scroll-reveal">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I'm a Computer Science student with a strong passion for cybersecurity, ethical hacking, and Penetration
+        testing.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="scroll-reveal">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li> <a href="https://github.com/abdelrahman-yahya/multi-user-notes-app" target="_blank">Multi user notes app</a></li>
+        <li> <a href="https://github.com/abdelrahman-yahya/Password_manager" target="_blank">Password manager</a></li>
+        <li><a href="https://github.com/abdelrahman-yahya/Guess_game" target="_blank">Guess game</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="scroll-reveal">
+    <div class="card">
+      <h2>Contact</h2>
+      <a class="btn" href="mailto:abdelrahmanyahya40@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+      <a class="btn" href="https://github.com/abdelrahman-yahya" target="_blank"><i class="fab fa-github"></i>
+        GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/abdelrahman-yahya-0x/" target="_blank"><i
+          class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+
+  <script>
+    // Background Animation
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const stars = [];
+    for (let i = 0; i < 200; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        alpha: Math.random(),
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${s.alpha})`;
+        ctx.fill();
+
+        s.x += s.dx;
+        s.y += s.dy;
+
+        if (s.x < 0 || s.x > canvas.width || s.y < 0 || s.y > canvas.height) {
+          s.x = Math.random() * canvas.width;
+          s.y = Math.random() * canvas.height;
+        }
+      });
+      requestAnimationFrame(drawStars);
+    }
+    drawStars();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // Scroll reveal animation for cards
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+
+</html>
